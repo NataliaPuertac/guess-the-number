@@ -4,9 +4,10 @@
 
 const userNumber = document.querySelector('.js-label');
 const btn = document.querySelector('.js-btn');
-const pista = document.querySelector('.js-pista');
-const intentos = document.querySelector('.js-intentos');
+const clue = document.querySelector('.js-clue');
+const tried = document.querySelector('.js-tried');
 const randomNumber = getRandomNumber(100);
+let counter = 0;
 
 console.log(`el número aleatorio es ${randomNumber}`);
 
@@ -16,18 +17,23 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
+function count() {
+  counter = counter + 1;
+  tried.innerHTML = `Número de intentos = ${counter}`;
+}
+
 function compare() {
   const userNumberValue = userNumber.value;
   if (parseInt(userNumberValue) === randomNumber) {
-    pista.innerHTML = `Has ganado campeona!!!`;
+    clue.innerHTML = `Has ganado campeona!!!`;
   } else if (parseInt(userNumberValue) === 0) {
-    pista.innerHTML = `El número debe estar entre 1 y 100.`;
+    clue.innerHTML = `El número debe estar entre 1 y 100.`;
   } else if (parseInt(userNumberValue) > 100) {
-    pista.innerHTML = `El número debe estar entre 1 y 100.`;
+    clue.innerHTML = `El número debe estar entre 1 y 100.`;
   } else if (parseInt(userNumberValue) < randomNumber) {
-    pista.innerHTML = `El número es demasiado bajo`;
+    clue.innerHTML = `El número es demasiado bajo`;
   } else if (parseInt(userNumberValue) > randomNumber) {
-    pista.innerHTML = `El número es demasiado alto`;
+    clue.innerHTML = `El número es demasiado alto`;
   }
 }
 
@@ -36,6 +42,7 @@ function compare() {
 function handleclick(ev) {
   ev.preventDefault();
   compare();
+  count();
 }
 
 btn.addEventListener('click', handleclick);

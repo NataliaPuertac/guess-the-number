@@ -10,14 +10,43 @@ font-weight: bold;
 
 .input{
     width: 25%;
+    background-color: lightgray;
+    border-radius: 10px;
+    border-style: none;
+    height: 30px;
 }
 
 .btn{
     width: 10%;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: aquamarine;
+    border-style: none;
+    height: 30px;
+    font-size: 16px;
 }
 
-.pistas{
+.div{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+}
+
+.clue{
+    border: solid 3px lightgray;
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.tried{
+    border: solid 3px lightgray;
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;  
+    color: gray;
 }
