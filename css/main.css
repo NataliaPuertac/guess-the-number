@@ -1,11 +1,19 @@
+
 .title{
 font-weight: bold;
+font-size: 40px;
+margin-left: 30px;
 }
 
 .form{
     display:flex;
     flex-direction: column;
     gap: 10px;
+    margin-left: 30px;
+}
+
+.text{
+font-size: 20px;
 }
 
 .input{
@@ -21,10 +29,10 @@ font-weight: bold;
     border-radius: 10px;
     color: white;
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: rgb(15, 168, 173);
     border-style: none;
     height: 30px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .div{
@@ -35,18 +43,22 @@ font-weight: bold;
 
 .clue{
     border: solid 3px lightgray;
+    font-size: 20px;
     width: 50%;
     height: 30px;
     display: flex;
     align-items: center;
     color: gray;
+    margin-left: 30px;
 }
 
 .tried{
     border: solid 3px lightgray;
+    font-size: 20px;
     width: 50%;
     height: 30px;
     display: flex;
     align-items: center;  
     color: gray;
+    margin-left: 30px;
 }
