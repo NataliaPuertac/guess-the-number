@@ -10,8 +10,6 @@ const reset = document.querySelector('.js-reset');
 const randomNumber = getRandomNumber(100);
 let counter = 0;
 
-console.log(`el número aleatorio es ${randomNumber}`);
-
 //función para agrupar todos los innerHTML y no repetir
 
 function msg(message) {
@@ -23,6 +21,8 @@ function msg(message) {
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
+
+console.log(`el número aleatorio es ${randomNumber}`);
 
 //función para actualizar el contador de intentos
 
